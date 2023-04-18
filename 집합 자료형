@@ -1,0 +1,44 @@
+퀴즈
+#Q. a = [1,1,1,2,2,3,3,3,4,4,5,5]를 [5, 4, 3, 2, 1]로 바꾸려면?
+#A. 집합으로 만들어 중복 제거하고 다시 리스트로 만든 다음 내림차순으로.
+
+a= list(set(a))
+a.sort(reverse=True)
+
+
+
+
+
+
+###실습
+
+
+list1 = [1,1,1,1,2,2,2,2,4,4,4,4,5,5,5,5,5,3,3,3,3]
+
+#리스트 값이 들어있는 변수 list1을 (5,4,3,2,1) 로 변환한 후, 
+
+set1 = set([3,4,5,6,7])
+
+#변수 set1과의 교집합, 합집합을 화면에 출력해보세요
+
+
+list1 = list(set(list1))
+list1.sort(reverse=True)
+list1 = tuple(list1)
+
+print("교집합", set(list1) & set1)
+print("합집합", set(list1) | set1)
+
+
+#############추가
+
+a.union(b) #a와 b의 합집합
+a.intersection(b) #a와 b의 교집합
+=> 그냥 &랑 | 쓰는 게 편함
+
+print(5 in a) #5가 집합 a안에 들어있니?(멤버 연산자) => True/False
+
+
+
+
+

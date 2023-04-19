@@ -1,0 +1,57 @@
+
+hit = 0
+while hit < 10:
+    hit = hit + 1
+    print("나무를 {}번 찍었습니다.".format(hit))
+    if hit ==10:
+        print("나무가 쓰러졌습니다.")
+
+coffee = 10
+
+while True:
+    coffee = coffee - 1
+    print("커피를 팔고, {}잔 남았습니다.".format(coffee))
+    if coffee == 0:
+        print("매진되었습니다.")
+        break
+
+#break를 안 하면 while문 조건이 항상 참이라 0일 때만 매진되었습니다 라고 뜨고 이후로 계쏙 -2, -3.. 으로 내려감.
+
+
+a = 0
+while a < 10:
+    a += 1 # a = a+1과 같음
+    if a % 2 == 0: #a가 짝수라면
+        continue
+    print(a) #a가 짝수면 컨티뉴를 만나서 다시 위로 올라가야하기 때문에 print까지 못감.
+    # 홀수면 if문 실행이 안돼서 print 만남. = 홀수만 출력하는 코드.
+    
+    
+    
+    
+    
+    
+    ###실습
+    
+#1. while문을 사용해서 1부터 1000까지 3의 배수의 합을 구해보세요.
+
+#2. while문을 사용해서 1부터 100까지 더하는 코드를 작성 후, 결과값을 화면에 출력해보세요. 
+
+a = 0
+sum = 0
+
+while a < 1000:
+    a += 1
+    if a % 3 == 0:
+        sum = sum + a
+print(sum)
+
+
+a = 0
+sum = 0
+while a < 100:
+    a += 1
+    sum += a
+print(sum)
+    
+    

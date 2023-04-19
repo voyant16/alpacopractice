@@ -61,7 +61,7 @@ for n1 in range(1, 46):
                     for n6 in range(n5+1, 46):
                         count += 1
 print(count)
-print(1 / count)
+print(1 / count) #당첨될 
 
 
 

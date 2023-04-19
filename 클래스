@@ -1,6 +1,27 @@
+class Bank:
+    
+    def __init__(self): #초기화 함수. 권한을 줄때(객체 생성 시. 클래스를 받을 때.) 자동으로 한번 실행됨. 
+        print("가입을 축하합니다!")
+        self.money = 0
+        
+    def deposit(self, a):
+        self.money += a
+    
+person1 = Bank() #person1에게 Bank 클래스 제공
+person1.deposit(50000)
+
+person2 = Bank()
+person2.deposit(30000) 
+
+print(person2.money) #self.money라는 변수를 만들었을 뿐 person1, person2를 따로 만들지 않았는데도 클래스 제공했기에 가능. self안에 person1, person2가 알아서 들어가는 것.
+
+person3 = Bank()
+print(person3.money)
 
 
 
+
+###실습
 #수업때 진행했던 Bank( ) 클래스에서 금액을 출금하는 기능도 추가해서 사용해보세요. 
 
 class Bank:

@@ -1,0 +1,106 @@
+
+def add(num1, num2):
+    return num1 + num2
+
+a = add(3,4)
+print(a)
+
+
+#입력값 없이 반환
+def say():
+    return 'hello'
+
+a = say()
+print(a)
+
+
+#입력값 있는데 반환은 하지 않음
+def add(num1, num2):
+    print(num1 + num2)
+
+a = add(4,5) #하면 9 출력 되는데(위에 print 함수가 있기 때문)
+print(a) #하면 'None'만 출력됨.(반환값이 없는 함수라서)
+
+#
+def intro(name, age, sex=5): #name이랑 age는 무조건 넣어줘야 하는 입력값이고, sex는 안넣으면 기본값 5가 성별에 들어감.
+    print("나의 이름은 {}이고, {}살입니다.".format(name, age))
+    if sex == 5:
+        print("나는 남자입니다.")
+    else:
+        print("나는 여자입니다.")
+    #반환값 없는 함수임
+
+intro("홍길동", 30) #성별 안넣어주면 알아서 5라는 숫자 넣음
+intro("아이유", 20, 3) #5가 아닌 숫자 아무거나 넣으면 기본값이 바뀌어서 다 여자로 나옴
+
+
+#전역변수와 지역변수, global
+def test():
+    a = 5 #지역변수
+
+a = 0 #전역변수
+test()
+print(a)  #결과값이 5가 아닌 0이 나옴. test 함수 안의 a가 아닌 함수 밖의 a를 출력해서.
+
+def test():
+    global a
+    a = 5 #이제 전역변수
+
+a = 0 #전역변수
+test()
+print(a) #이제 5 나옴.
+
+
+
+#재귀함수: 내가 나를 부르는 함수
+def fac(n): #팩토리얼 (재귀함수 쓰기 전)
+    a = 1
+    for i in range(1, n+1):
+        a = a * i
+    return a
+
+print(fac(5))
+ #얘를 더 간단하게 재귀함수 쓰면
+
+def fac(n):
+    if n == 1:
+        return 1
+    else:
+        return n * fac(n-1) #fac함수 안에서 fac함수를 부르고 있음!
+
+print(fac(5)) #5*4*3*2*1
+
+
+
+###실습, 피보나치 수열: 앞에 거 두 개를 더하는 수열
+
+"""피보나치 수열에서 위치에 해당하는 값을 반환해주는 함수를 완성해보세요. 
+예) fibo함수에 5를 전달하면 5번째 피보나치 수열의 값을 반환하면 됩니다.
+
+피보나치 수열 : 0, 1, 1, 2, 3, 5, 8, 13, 21 ...
+
+def fibo(n):
+?      
+
+ex)
+fibo(5)
+3
+
+fibo(7)
+8"""
+
+
+
+
+def fibo(n):
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fibo(n-1) + fibo(n-2) #앞에 거 두 개를 더해라, 재귀함수 이용
+
+print(fibo(5))
+print(fibo(7))
+
+
